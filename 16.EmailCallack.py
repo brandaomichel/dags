@@ -17,14 +17,14 @@ default_args = {
 def on_fail(ctx):
     send_email(
         to=['teste@email.com'],
-        subject=f'[FAIL] {ctx['ti'.task_id]}',
+        subject=f'[FAIL] {ctx['ti'].task_id}',
         html_content='FAIL',
     )
 
 def on_ok(ctx):
     send_email(
         to=['teste@email.com'],
-        subject=f'[SUCCESS] {ctx['ti'.task_id]}',
+        subject=f'[SUCCESS] {ctx['ti'].task_id}',
         html_content='Sucesso',
     )
 
