@@ -8,7 +8,7 @@ ITENS = ["sp", "rj"," mg", "rs"]
 with DAG(
     dag_id="agendamento",
     description="agendamento",
-    schedule="@continuos",
+    schedule=None,
     start_date=pendulum.datetime(2025,1,1,tz="America/Sao_Paulo"),
     catchup=False,
     tags=["curso","exemplo"]
